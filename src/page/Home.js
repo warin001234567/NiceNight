@@ -130,14 +130,18 @@ const Home = (props) => {
   const handleSave = (value) => {
     const timeSet = hours + ":" + minute + " " + amPm;
     const newtime = Moment(timeSet, "hh:mm A").format("hh:mm A");
-    console.log("1");
+    var historyData = [];
+    console.log(newtime);
     try {
-      var historyData = JSON.parse(localStorage.getItem("history"));
+      historyData = JSON.parse(localStorage.getItem("history"));
       console.log("2");
       console.log("HistoryData:", historyData);
     } catch (error) {
       console.log(error);
-      var historyData = [];
+      historyData = [];
+    }
+    if (historyData == null) {
+      historyData = [];
     }
     if (mode) {
       var history = {

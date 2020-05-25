@@ -14,6 +14,9 @@ const History = () => {
       console.log(error);
       var historyData = [];
     }
+    if (historyData == null) {
+      historyData = [];
+    }
     setHistoryTime(historyData);
     setLoading(true);
   }, []);
