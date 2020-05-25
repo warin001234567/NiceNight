@@ -43,7 +43,7 @@ const History = () => {
             {historyTime.map((item, index) => {
               return (
                 <tr>
-                  <td>{index}</td>
+                  <td>{index + 1}</td>
                   <td>{item.date}</td>
                   <td>{item.sleepTime}</td>
                   <td>{item.wakeupTime}</td>
